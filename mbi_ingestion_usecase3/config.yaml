@@ -3,8 +3,6 @@ global:
   schema: mbi
   workspace_url: https://fevm-serverless-stable-14ey07.cloud.databricks.com
 
-usecase1:
-  file_description_path: vol1/source/usecase1_file_description/usecase1-purpose.csv
 
 ingestion:
   source_volume_path: vol1/source/usecase1
@@ -25,7 +23,7 @@ ingestion:
     summarization_llm: databricks-claude-opus-4-6
 
     summarization_prompt: |
-      The following document chunk was extracted from the source file specified below. A brief description of the source file is also provided. Summarize the chunk using the context from the source file and its description. Return a concise yet descriptive summary. RETURN ONLY THE SUMMARY AND NOTHING ELSE.
+      Summarize the following document chunk. Return a concise yet descriptive summary. RETURN ONLY THE SUMMARY AND NOTHING ELSE.
     platinum_table: docs_platinum
   
   vector_search:

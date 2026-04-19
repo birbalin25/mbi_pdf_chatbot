@@ -3,9 +3,6 @@ global:
   schema: mbi
   workspace_url: https://fevm-serverless-stable-14ey07.cloud.databricks.com
 
-# usecase1:
-#   file_description_path: vol1/source/usecase1/supporting_files/usecase1-purpose.csv
-
 ingestion:
   source_volume_path: vol1/source/usecase2/input_pdf_files/
   entities_table: entities_uc2

@@ -47,14 +47,11 @@ summarization_llm = platinum_config["summarization_llm"]
 summarization_prompt = platinum_config["summarization_prompt"]
 platinum_table = platinum_config["platinum_table"]
 
-file_description_path = config["usecase1"]["file_description_path"]
-file_description_path_volume = f"/Volumes/{catalog}/{schema}/{file_description_path}"
 
 print(f"Configuration loaded.")
 print(f"  Input:                        {catalog}.{schema}.{quality_scored_table}")
 print(f"  Output:                       {catalog}.{schema}.{platinum_table}")
 print(f"  Summarization LLM:            {summarization_llm}")
-print(f"  file_description_path_volume: {file_description_path_volume}")
 print(f"  Summarization prompt:         {summarization_prompt}")
 
 # COMMAND ----------
@@ -79,22 +76,6 @@ total_pages = quality_df.count()
 print(f"Total pages in source table: {total_pages}")
 print(f"Added unique chunk_id (UUID) to each row")
 
-display(quality_df)
-
-# COMMAND ----------
-
-# MAGIC %md
-# MAGIC ## Read Purpose CSV and Join File Descriptions
-
-# COMMAND ----------
-
-purpose_df = spark.read.option("header", "true").option("multiLine", "true").csv(file_description_path_volume)
-display(purpose_df)
-
-# COMMAND ----------
-
-quality_df = quality_df.join(purpose_df, on="file_name", how="left")
-print(f"Joined file_description from usecase1-purpose.csv")
 display(quality_df)
 
 # COMMAND ----------
@@ -125,7 +106,6 @@ enriched_df = high_quality_df.withColumn(
     "enriched_content",
     F.concat(
         F.lit("\nDocument Type: "), F.col("document_type"),
-        F.lit("\nFile Description: "), F.coalesce(F.col("file_description"), F.lit("")),
         F.lit("\n\nPage Content:\n"), F.col("page_content")
     )
 )
@@ -152,7 +132,6 @@ SELECT
     file_name,
     file_path,
     document_type,
-    file_description,
     page_id,
     page_content,
     image_uri,
@@ -181,7 +160,6 @@ final_df = summarized_df.selectExpr(
     "file_name",
     "file_path",
     "document_type",
-    "file_description",
     "page_id",
     "concat(page_content, '\\n\\n','summary','\\n', page_summary) AS page_content_final",
     "page_content",
