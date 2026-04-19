@@ -1,0 +1,37 @@
+global:
+  catalog: serverless_stable_14ey07_catalog
+  schema: mbi
+  workspace_url: https://fevm-serverless-stable-14ey07.cloud.databricks.com
+
+usecase1:
+  file_description_path: vol1/source/usecase1_file_description/usecase1-purpose.csv
+
+ingestion:
+  source_volume_path: vol1/source/usecase1
+  entities_table: entities
+  bronze_layer:
+    metadata_extraction_llm: databricks-claude-opus-4-6
+    bronze_table: docs_bronze
+  silver_layer:
+    parsed_document_table: docs_silver_parsed_docs_raw
+    document_elements_table: docs_silver_elements
+    document_pages_table: docs_silver_pages
+    image_output_path: vol1/parsed_doc_images/usecase1
+  gold_layer:
+    aggregated_pages_table: docs_gold_pages
+    page_quality_rater_llm: databricks-claude-opus-4-6
+
+  platinum_layer:
+    summarization_llm: databricks-claude-opus-4-6
+
+    summarization_prompt: |
+      The following document chunk was extracted from the source file specified below. A brief description of the source file is also provided. Summarize the chunk using the context from the source file and its description. Return a concise yet descriptive summary. RETURN ONLY THE SUMMARY AND NOTHING ELSE.
+    platinum_table: docs_platinum
+  
+  vector_search:
+    endpoint_name: vsi_mbi
+    index_name: docs_platinum_index_mbi
+    primary_key: chunk_id
+    embedding_source_column: page_content_final
+    embedding_model_endpoint: databricks-gte-large-en
+    pipeline_type: TRIGGERED

@@ -1,0 +1,40 @@
+question,answer
+What is the primary purpose of FAA Advisory Circular AC 150/53902D?,"The primary purpose of AC 150/53902D is to provide standards and recommended practices for the planning, design, and construction of heliports that serve helicopters with single, tandem (front and rear), or dual (sidebyside) rotors, in order to promote safe and uniform heliport development."
+Is compliance with AC 150/53902D mandatory for all heliport projects?,"No, compliance with AC 150/53902D is generally voluntary and the document itself does not constitute a regulation. However, the standards are mandatory for heliport projects funded under federal programs, such as the Airport Improvement Program (AIP), CARES Act Airport Grants, and the Passenger Facility Charge (PFC) program, where conformity is required by grant assurances or regulation."
+What are the two basic operational areas that form the foundation of a heliport according to AC 150/53902D?,"According to AC 150/53902D, the two fundamental operational areas of a heliport are the Touchdown and Liftoff Area (TLOF) and the Final Approach and Takeoff Area (FATO). The advisory circular provides specific minimum dimensional standards for each area based on the type of heliport and the design helicopter"
+"Does AC 150/53205D provide guidance for special environmental conditions, such as cold regions?","Yes. AC 150/53205D includes specific guidance for designing drainage systems in arctic and subarctic regions. This guidance addresses challenges such as frost action, snowmelt, and frozen ground conditions, ensuring drainage systems function effectively in cold climates while minimizing pavement damage"
+"How should runway and taxiway drainage be designed to handle Massachusetts rainfall, snow, and rapid snowmelt?","For a new airport in Massachusetts, AC 150/53205D requires that surface drainage systems be designed to rapidly remove water from runways, taxiways, and aprons during rainfall events and snowmelt conditions. Pavement slopes, inlets, channels, and storm drains must be sized based on local precipitation data and seasonal runoff to prevent ponding, icing, and hydroplaning hazards common in New England climates"
+What subsurface drainage systems are required to address high groundwater levels common in Massachusetts?,"AC 150/53205D recommends subsurface drainage systems, such as edge drains and underdrains, where groundwater levels may affect pavement performance. In Massachusetts, where shallow groundwater and saturated soils are common, subsurface drainage is essential to prevent moisture buildup within pavement layers, which can lead to reduced structural capacity, frost damage, and premature pavement failure"
+"For a new airport in Hawaii designed to serve large commercial aircraft (Airplane Design Group IV), what are the minimum required dimensions of the Runway Safety Area (RSA)?","According to FAA AC 150/530013B (Airport Design):
+The Runway Safety Area (RSA) must be: 
+500 feet wide total (250 feet on each side of the runway centerline)
+Extend 1,000 feet beyond each runway end
+The RSA must be graded, drained, and capable of supporting aircraft during runway overruns or veeroffs. These minimum dimensions apply even at Hawaiian airports where land, terrain, or coastal conditions may be constrained"
+What guidelines and restrictions must be considered when preparing an Airport Master Plan for a new airport on Nantucket Island?,"According to FAA AC 150/500017, an Airport Master Plan must follow FAA planning guidelines while identifying and respecting physical, environmental, and landuse restrictions. For a Nantucket Island airport, this includes:
+Ensuring airport development is compatible with surrounding land uses
+Accounting for limited land availability and physical constraints of an island location
+Identifying environmental restrictions, such as wetlands, coastal resources, and protected areas
+Avoiding development that would conflict with safety surfaces, RPZs, or airspace requirements
+Planning improvements in phases to minimize impacts while meeting longterm aviation demand
+These guidelines help ensure the airport can develop safely and efficiently without creating incompatible land uses or environmental conflicts."
+"The average number of annual aircraft operations to and from the Valdez Airport in Alaska are summarized in the list below.
+Beech 1900 A, 102 operations
+Beech 200 Super Kingair, 16 operations
+Beechcraft Beech 18 C-185, 1 operation
+Cessna 208 Caravan, 3 operations
+De Havilland DHC8-100 Dash-8, 1028 operations
+Pilatus PC-12, 3 operations
+Helicopters, 83 operations
+
+a. What is the critical design aircraft for this airport? 
+b. What should the minimum runway, taxiway, and safety area widths be?
+c. Is a drainage layer required for the pavement at this airport? 
+d. If a 6-inch thick base course will be used for the pavement, what should the minimum P-401 asphalt pavement thickness be?","a. De Havilland DHC8-100 Dash-8
+b. Runway, Taxiway, and Safety area widths
+Runway – 100 ft
+Taxiway – 50 ft
+Runway Safety Area – 300 ft
+Taxiway Safety Area – 118 ft
+c. A drainage layer is not required but is recommended.
+d. The minimum thickness should be 3 - 4 inches."
+"What is the Aircraft Approach Category, Airplane Design Group, and Taxiway Design Group for a De Havilland DHC8-100 Dash-8 aircraft?","A De Havilland DHC8-100 Dash-8 aircraft is classified as Aircraft Approach Category B, Airplane Design Group III, and Taxiway Design Group 3"

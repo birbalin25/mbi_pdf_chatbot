@@ -1,0 +1,71 @@
+bundle:
+  name: mbi_usecase1
+
+targets:
+  dev:
+    default: true
+    workspace:
+      profile: azure11
+    resources:
+      jobs:
+        mbi_document_pipeline:
+          name: "[DEV] MBI Document Processing Pipeline"
+
+  prod:
+    workspace:
+      profile: azure11
+    resources:
+      jobs:
+        mbi_document_pipeline:
+          name: "[PROD] MBI Document Processing Pipeline"
+
+resources:
+  jobs:
+    mbi_document_pipeline:
+      name: "MBI Document Processing Pipeline"
+
+      tasks:
+        - task_key: 01_extract_metadata
+          environment_key: default
+          notebook_task:
+            notebook_path: ./01_extract_file_metadata.py
+            source: WORKSPACE
+
+        - task_key: 02_parse_documents
+          depends_on:
+            - task_key: 01_extract_metadata
+          environment_key: default
+          notebook_task:
+            notebook_path: ./02_parse_documents.py
+            source: WORKSPACE
+
+        - task_key: 03_aggregate_pages
+          depends_on:
+            - task_key: 02_parse_documents
+          environment_key: default
+          notebook_task:
+            notebook_path: ./03_aggregate_pages.py
+            source: WORKSPACE
+
+        - task_key: 04_summarize_pages
+          depends_on:
+            - task_key: 03_aggregate_pages
+          environment_key: default
+          notebook_task:
+            notebook_path: ./04_summarize_pages.py
+            source: WORKSPACE
+
+        - task_key: 05_create_vector_search_index
+          depends_on:
+            - task_key: 04_summarize_pages
+          environment_key: default
+          notebook_task:
+            notebook_path: ./05_create_vector_search_index.py
+            source: WORKSPACE
+
+      environments:
+        - environment_key: default
+          spec:
+            environment_version: "5"
+            dependencies:
+              - pyyaml
