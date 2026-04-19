@@ -1,0 +1,78 @@
+[
+  {
+    "question": "What was the percent compaction result for the building pad density test on the Mitchell's land solution project, and did it meet specifications?",
+    "guidelines": [
+      "Search CDS (Conventional Density Survey/Testing) reports. These are titled 'CONVENTIONAL DENSITY TESTING' and contain volumetric test data",
+      "Return the percent compaction value, the dry road density, the dry AASHTO density, and whether the result 'MEETS SPECIFICATIONS' or not",
+      "Always include the test number, date, client, contractor, structure type (e.g., BUILDING PAD), test type (e.g., EMB-FILL), and reference point location",
+      "If multiple tests exist on the same report, list each test separately with its own compaction result"
+    ]
+  },
+  {
+    "question": "How many cubic yards of concrete were delivered for the Brookshire curb and gutter placement, and what mix design was used?",
+    "guidelines": [
+      "Search CONC (Concrete/Grout Placement Field Report) documents. These contain mix design IDs, PSI strength, supplier, cubic yards, slump, air content, and temperature data",
+      "Return: total cubic yards placed, concrete PSI, mix design ID, supplier name, method of placement (e.g., Truck Chute), wind conditions, measured slump range, measured air content range, air temperature range, and mix temperature range",
+      "State whether the observations appeared in compliance (look for 'All' or 'Part' compliance language) and whether inspection was continuous or periodic",
+      "Include the number of specimen sets cast and specimens per set for strength testing."
+    ]
+  },
+  {
+    "question": "What were the DCP test blow counts at the NE corner on the Doub Road project, and what soil type was found?",
+    "guidelines": [
+      "Search DCP (Hand Auger Dynamic Cone Penetrometer Test Report) documents. These contain test location, soil type, fill/residual classification, test depth below subgrade elevation, increment blow counts (1st, 2nd, 3rd), and average blows",
+      "Return results for ALL test depths at the requested location (e.g., 0 ft, -1 ft, -2 ft below subgrade).",
+      "Present the data in a structured format: test location, soil type, fill/residual, depth, each increment blow count, and computed average blows",
+      "Higher average blow counts indicate stronger soil. If a location shows notably low counts (below 10), flag this as potentially indicating weaker bearing capacity"
+    ]
+  },
+  {
+    "question": "Was the subgrade at the building pad location considered suitable after proof rolling, and what equipment was used?",
+    "guidelines": [
+      "Search PR (Observation of Proof Rolling) reports. These document subgrade material, proof roll location, equipment type, number of passes, movement observations, and suitability determination",
+      "Return: contractor name, subgrade material type (e.g., Silty Clay, Sandy silt clay mix), specific area where proof rolling was performed, equipment used (e.g., off road articulated dump truck), number of passes made, movement observed (e.g., 'minimal movement'), and the final suitability determination ('suitable' or 'unsuitable' for fill placement)",
+      "Always explicitly state the suitability conclusion. If the area was deemed unsuitable, note any recommended corrective actions mentioned"
+    ]
+  },
+  {
+    "question": "Were any deficiencies or exceptions found during the rebar inspection at the Brookshire North culvert extension footing?",
+    "guidelines": [
+      "Search REIN (Reinforcing Steel Inspection Report) documents. These contain the location of reinforced concrete construction, exception statements, deficiency lists, and a checklist of observed aspects",
+      "EFirst, state whether exceptions were observed (look for 'No exceptions observed' or listed exceptions).",
+      "Then list ALL inspection aspects and their status (true = checked/passed, null = not applicable/not checked): size/grade/spacing of bars, clearance between bars, type and adequacy of supports, termination of reinforcement, securing of reinforcement, depth and cover, stirrup/tie spacing, development and lap splice lengths, reinforcement cleanliness (free of ice, oil, mud, paint), location of embeds, and mechanical/welded splices"
+    ]
+  },
+  {
+    "question": "What asphalt mix type and tonnage were placed at the Corinth Village Phase 9 project, and was tack coat applied?",
+    "guidelines": [
+      "Search MB60 (Asphalt Placement Field Report and Asphalt Placement Report) documents. These contain mix type, JMF number, asphalt producer, daily tonnage, equipment details, tack coat information, and temperature readings",
+      "Return: mix type (e.g., RS9.5B), JMF number, asphalt producer and plant site, total daily tonnage, base type (e.g., ABC), begin/end stations, linear feet, width, and square yards",
+      "For tack coat: state whether it 'was' or 'was not' placed; if placed, include supplier, grade, gallons, and temperature compliance. Include spreading equipment (make, speed) and rolling equipment (type, weight in tons, tire pressure, speed). Report all temperature readings: air temperature, surface temperature, and mix temperature."
+    ]
+  },  
+  {
+    "question": "What observations and testing activities were documented at the Hudson Commons project site visit?",
+    "guidelines": [
+      "Search DOR (Daily Observation Report) documents. These contain project details, weather conditions, arrival/departure times, lab sample pickups, and narrative summaries of site observations",
+      "Return: project name, project number, location, date, weather conditions, temperature, NCDOT project status, client name, contractor name, and technician name. Include visit timing: arrival time, departure time, stand-by time, travel time, and lab sample pickup details (type and mileage)",
+      "Present the full 'Summary of Observations, Testing, and Recommendations' narrative text. Note whether further action is required (look for 'Additional comments / Further Action Required' field)"
+    ]
+  },
+
+  {
+    "question": "Compare the DCP average blow counts across all test locations and depths to identify which areas may have weaker soil bearing capacity.",
+    "guidelines": [
+      "Search all DCP (Dynamic Cone Penetrometer) reports and compile a comparative summary across all tested locations",
+      "Present a table or structured list with: test location (e.g., NW corner, SE corner, Middle of sediment basin), soil type, fill vs. residual, test depth (ft below subgrade), and average blow counts. Group data by report/project and then by test location",
+      "Identify locations with the lowest average blow counts as potentially weaker areas. Blow counts below 10-12 may warrant attention depending on bearing capacity requirements. Note any differences between surface (depth 0) and deeper tests (-1 ft, -2 ft) that could indicate layered soil conditions"
+    ]
+  },
+  {
+    "question": "Were the concrete placement temperatures and slump values within the specified range for the Duke Lazzara Development project, and how many test specimens were cast?",
+    "guidelines": [
+      "Search CONC (Concrete/Grout Placement) reports for the Duke Lazzara or Duke Lazzara Development project.",
+      "Return: specified slump range vs. measured slump range, specified air content range vs. measured air content range, air temperature range, mix/concrete temperature range, and batch-to-placement time in minutes. State whether test results appeared within compliance. If compliance is noted as 'to be' (pending final determination), explicitly indicate results are pending.",
+      "Report the number of specimen sets cast, specimens per set, specimen type (e.g., 4 cylinders), sample source (truck vs. point of placement), and whether a curing box was used. Include the test table data: test number, location/structure type, gallons of additional water, batch-to-placement time, slump reading, air temperature, concrete temperature, and pressure meter air test result."
+    ]
+  } 
+]

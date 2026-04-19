@@ -74,12 +74,17 @@ display(files_df.limit(10))
 
 # COMMAND ----------
 
+# MAGIC %sql
+# MAGIC SELECT split('CDS-001.pdf', '\\.')[0] AS document_type
+
+# COMMAND ----------
+
 metadata_query = f"""
 SELECT
     file_name,
     file_path,
     file_size,
-    regexp_extract(split(file_path, '/')[size(split(file_path, '/')) - 1], '^([^\\-]*\\-[^\\-]*)', 1) AS document_type
+    split(file_name, '\\\\.')[0] AS document_type
 FROM pdf_files
 """
 
@@ -125,3 +130,7 @@ display(result_df.limit(20))
 
 print("Documents by Type:")
 display(result_df.groupBy("document_type").count().orderBy(F.desc("count")))
+
+# COMMAND ----------
+
+

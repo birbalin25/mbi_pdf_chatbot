@@ -358,3 +358,7 @@ print("\nPage aggregation and quality rating pipeline complete!")
 # COMMAND ----------
 
 display(quality_result_df)
+
+# COMMAND ----------
+
+

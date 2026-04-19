@@ -1,0 +1,81 @@
+[                                                                                                                                          
+    {                                                                                                                                        
+      "question": "What are the available ampere ratings and frame sizes for the ASCO 7000 Series automatic transfer switch?",               
+      "guidelines": [                                                                                                                        
+        "Respond with a structured table or list showing Frame designations (D, J, H, G) and their corresponding ampere ranges (e.g., D = 30A-230A, J = 150A-600A, H = 800A-1200A, G = 1600A-4000A).",
+        "Differentiate between 60 Hz and 30 cycle product lines, noting that 30-cycle frames use P, Q, S, G, and U designations. Mention that both automatic (7ATS, 7ACTS, 7ADTS) and non-automatic (7NTS, 7NCTS, 7NDTS) transition types are available.",
+        "Include the warranty summary: 2 years labor, 5 years parts (2 years for circuit breakers), 10 years for main contacts. Cite the source document: Elec - ASCO 7000-SERIES ATS.pdf."
+      ]
+    },
+    {
+      "question": "How do I properly install a single duct VAV terminal unit? What are the key steps and precautions?",
+      "guidelines": [
+        "Walk through the installation steps in order: (1) Receiving inspection for shipping damage, (2) Check damper rotation by hand, (3) Support the assembly using straps, threaded rods, or optional hanger brackets, (4) Make duct connections by slipping inlet duct over the inlet collar, (5) Complete field wiring per NEC/NFPA 70 codes.",
+        "Emphasize the safety caution: Do not use the flow sensor, connecting tubing, or damper shaft linkage as a handle to lift or move the assembly. Note that inlet duct must match the listed terminal size (e.g., an 8-inch duct for a size 8 terminal) and the inlet collar is 1/8 inch smaller than listed size.",
+        "Mention that pneumatic-controlled units must be mounted right side up, level within +/- 10 degrees of horizontal. Cite the source document: Mech - VAV IOM - SingleDuctTerminal.pdf."
+      ]
+    },
+    {
+      "question": "The fan motor on my fan powered VAV terminal is running but the airflow is insufficient. What should I check?",
+      "guidelines": [
+        "Provide a structured troubleshooting checklist from the FPVAV IOM manual: (a) Check for ductwork restrictions, (b) Inspect for dirty air filters or clogged water coils, (c) Re-adjust fan speed control, (d) Verify discharge static pressure is not too high.",
+        "If the motor runs with excessive noise, advise checking: clearance problems on blower, all components securely attached, integrity of ductwork for leaks or loose connections, rattling diffusers or balancing dampers, and whether CFM is too high or discharge static pressure is too low.",
+        "Note the difference between PSC and ECM motor adjustment procedures. PSC motors are shipped at full speed setting, while ECM motors use a PWM controller with a flow index of 0-100. The minimum recommended discharge static pressure is 0.2 in. w.g. Cite the source document: Mech - FPVAV IOM - fb-iom 12-11-23.pdf."
+      ]
+    },
+    {
+      "question": "I need a three-phase, 75 kVA, DOE 2016 energy-efficient dry-type transformer with 208 Delta to 208Y/120 Volts. What Eaton catalog number should I use?",
+      "guidelines": [
+        "Look up the specific catalog number from the Eaton Transformer Catalog product selection tables. For a three-phase 75 kVA 208 Delta to 208Y/120V unit: aluminum winding at 150C rise = V29M28T7516, at 115C rise = V29M28F7516, at 80C rise = V29M28B7516. Copper winding equivalents end in 'CU' suffix.",
+        "Always ask or clarify whether the user wants aluminum or copper windings, as catalog numbers differ. Include the frame designation, approximate weight, Type 3R weathershield kit number, and wallmount bracket information from the tables.",
+        "Mention that Eaton transformers are DOE 2016 compliant per CFR Title 10, UL listed, seismically qualified, and meet NEMA ST-20 sound levels. The DOE 2016 efficiency for a 75 kVA three-phase transformer is 98.60%. Cite the source document: Elec - Eaton XFMR Catalog.pdf."
+      ]
+    },
+    {
+      "question": "What is the capacity range of the APC Galaxy VM UPS, and what applications is it designed for?",
+      "guidelines": [
+        "State that the Galaxy VM is part of the APC/Schneider Electric three-phase power systems portfolio, available in the 160-200 kVA range. Describe target applications: data centers, mission-critical systems, enterprise networks, and industrial/manufacturing processes.",
+        "Note the key value proposition: highest levels of availability, reduced total cost of ownership (TCO), and improved energy efficiency. The portfolio includes both 400V/50Hz and 480V/60Hz product families with accessories and services.",
+        "Include the safety warning: These UPS systems are not compatible with and should not be used to protect regenerative loads (loads generating power back to the network), such as photovoltaic systems and speed drives. Cite the source document: Elec - APC Galaxy VM UPS 200kVA Cutsheet.pdf."
+      ]
+    },
+    {
+      "question": "How do I build a catalog number to order an ASCO 7000 Series power transfer switch?",
+      "guidelines": [
+        "Explain the catalog number structure segment by segment: Frame + Transition Type + Neutral Code + Phase/Poles + Amperes + Voltage Code + Group Code + Enclosure. Use the example from the document: J07ATSA30600N5XC where J = 150A-600A frame, 07ATS = Automatic conventional 2-position, A = Solid neutral, 3 = 3-phase, 0600 = 600 amps, N = 480V, 5X = Optional accessories, C = Type 1 enclosure.", "List the key transition types: 7ATS (automatic), 7ACTS (closed transition), 7ADTS (delayed transition), 7ATB (open transition bypass), and their non-automatic equivalents (7NTS, 7NCTS, 7NDTS, 7NTB). Note that enclosure options range from 0 (open type) to V (Type 4X secure double door, 316 stainless steel).",
+        "Mention the special note that 225 and 230 amp switches are limited to 480V maximum for D7ATS only. For service entrance switches, the catalog prefix changes to 07AUS and requires a solid neutral (A) minimum. Cite the source document: Elec - ASCO 7000-SERIES ATS.pdf."
+      ]
+    },
+    {
+      "question": "What are the monthly maintenance tasks required for a Trane Horizon outdoor air unit?",
+      "guidelines": [
+        "List the key monthly maintenance items from the IOM: (1) Filter inspection and replacement, (2) Supply/return air smoke detector maintenance, (3) Condensate drain inspection during cooling season, (4) Condenser coil cleaning as needed, (5) ERV wheel maintenance and cleaning if equipped.",
+        "Emphasize safety requirements: only qualified personnel should install and service the equipment, proper PPE is required, and technicians must follow lockout/tagout procedures. Note the R-454B refrigerant is classified as A2L (mildly flammable), so special handling practices apply including ignition source mitigation and leak detection.",
+        "Reference the start-up checklist and pre-start-up procedures for initial commissioning. Mention that the maximum altitude of use is 10,000 feet. Cite the source document: Mech - Trane Horizion IOM.pdf."
+      ]
+    },
+    {
+      "question": "What are the CFM range and physical dimensions for a size 12 Titus ESV single duct VAV terminal unit?",
+      "guidelines": [
+        "Provide the specific data from the ESV submittal: Size 12 has a CFM range of 0-2000, with dimensions D (H x W) = 11 7/8 inches, H = 15, L = 15 1/2, M = 3 3/8, W = 16 inches. Differentiate between control types: Digital (DESV), Analog (AESV), Electric (EESV), and Pneumatic (PESV) as the pneumatic version has different dimension columns.",
+        "Mention available accessories: hot water coil section (1-4 rows with aluminum ripple fins and copper tubes), electric coil section with supply voltage options (120V, 208V, 240V, 277V single-phase and 480V 3-phase), fiberglass/EcoShield liners, sound attenuators, hanger brackets, and disconnect switches.",
+        "Note that total unit length equals the base unit length plus the optional attenuator length plus the optional water coil length. Include the general description: heavy gauge G40 galvanized steel housing, dual density internal insulation meeting NFPA 90A and UL 181,less than 2% of nominal CFM leakage at 1.5 in. sp wg. Cite the source document: Mech - VAV Submittal - ESV.pdf."
+      ]
+    },
+    {
+      "question": "How does the Hubbell IEC pin and sleeve catalog numbering system work, and what IP rating do these devices carry?",
+      "guidelines": [
+        "Explain the catalog number structure using the example HBL4100C12W: HBL = Hubbell catalog number, 4 = 4-wire, 100 = 100 Amp, C = Connector type, 12 = ground sleeve at 12 o'clock position (125/250V), W = Watertight. Describe the letter codes for device type: P = Plug, R = Receptacle, C = Connector, B = Inlet, MI = Mechanical Interlock, MIF = Mechanical Interlock Fused.",
+        "Explain that voltage is determined by the clock position of the ground contact relative to the housing keyway, creating singly rated non-interchangeable configurations per IEC 60309-1 and 60309-2. Housings are color coded by voltage: 100-130V, 125V/250V, 200V-250V, 277V, 380V-480V, 500V-690V.",
+        "State the IP67 watertight suitability rating for all devices. Highlight key features: sequential contact engagement (ground makes first and breaks last), self-closing gasketed cover, insulated non-metallic housing, lockout/tagout capability with 3/8 inch shackle diameter, and captive barrel nuts for cord retention. Cite the source document: Elec - Hubbell IEC Socket Spec Sheet.pdf."
+      ]
+    },
+    {
+      "question": "What are the standard features and battery runtime specifications for the Myers Illuminator IE Series central lighting inverter?",
+      "guidelines": [
+        "List standard features: 98% efficiency, PWM/IGBT technology, micro-processor control, UL 924 listed, automatic event/test/alarm log, RS232 communications port, input circuit breaker, 50ms transfer time, low audible noise, space-saving single cabinet design. State the standard battery runtime is 90 minutes at full load, with other runtimes available upon request (15, 20, 30, 60, 120, 180, 240 minutes).",
+        "Provide the capacity range: models from 1.5 KVA/KW (model E-1-S) to 16.7 KVA/KW (model E-10-S). Note that KVA equals KW for this product line. Include physical dimension reference: smaller models (1.5-5.0 KVA) are approximately 25 x 30 x 47 inches, larger models (6.0-16.7 KVA) are approximately 25 x 48 x 76 inches.",
+        "Mention optional features: BACnet, internal maintenance bypass, fast charge, remote meter panel, output circuit breakers, factory startup and training, extended electronics warranty, and service monitoring plan (SMP). Note that input/output is 120 or 277 VAC, 1 phase, 2 wire plus ground, compatible with all LED drivers. Cite the source document: Elec - Myers Illuminator IE Series Central Lighting Inverter Cutsheet.pdf."
+      ]
+    }
+  ]

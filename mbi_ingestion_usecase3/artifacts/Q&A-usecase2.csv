@@ -1,6 +1,0 @@
-question,answer
-What is the recommended maintenance interval for AHU-3 filters?,"Replace every 6 months or 2,000 operating hours"
-What is the rated airflow capacity of the unit?,"12,000 CFM"
-What alarms are generated for high static pressure?,High static pressure alarm triggers at 2.5 in. w.g.
-What steps are required to reset a chilled water pump?,"Verify breaker status, clear alarm, confirm system pressure, then restart via control panel"
-What safety precautions are required before servicing?,Lockout/tagout and PPE compliance

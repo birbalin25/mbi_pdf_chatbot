@@ -88,14 +88,14 @@ display(quality_df)
 
 # COMMAND ----------
 
-purpose_df = spark.read.option("header", "true").option("multiLine", "true").csv(file_description_path_volume)
-display(purpose_df)
+# purpose_df = spark.read.option("header", "true").option("multiLine", "true").csv(file_description_path_volume)
+# display(purpose_df)
 
 # COMMAND ----------
 
-quality_df = quality_df.join(purpose_df, on="file_name", how="left")
-print(f"Joined file_description from usecase1-purpose.csv")
-display(quality_df)
+# quality_df = quality_df.join(purpose_df, on="file_name", how="left")
+# print(f"Joined file_description from usecase1-purpose.csv")
+# display(quality_df)
 
 # COMMAND ----------
 
@@ -125,7 +125,7 @@ enriched_df = high_quality_df.withColumn(
     "enriched_content",
     F.concat(
         F.lit("\nDocument Type: "), F.col("document_type"),
-        F.lit("\nFile Description: "), F.coalesce(F.col("file_description"), F.lit("")),
+        # F.lit("\nFile Description: "), F.coalesce(F.col("file_description"), F.lit("")),
         F.lit("\n\nPage Content:\n"), F.col("page_content")
     )
 )
@@ -152,7 +152,7 @@ SELECT
     file_name,
     file_path,
     document_type,
-    file_description,
+    -- file_description,
     page_id,
     page_content,
     image_uri,
@@ -181,7 +181,7 @@ final_df = summarized_df.selectExpr(
     "file_name",
     "file_path",
     "document_type",
-    "file_description",
+    # "file_description",
     "page_id",
     "concat(page_content, '\\n\\n','summary','\\n', page_summary) AS page_content_final",
     "page_content",
@@ -246,3 +246,11 @@ compression_stats = result_df.agg(
 compression_ratio = compression_stats["avg_content_length"] / compression_stats["avg_summary_length"]
 print(f"\nCompression ratio: {compression_ratio:.1f}x")
 print(f"  (Average content: {compression_stats['avg_content_length']:.0f} chars -> Summary: {compression_stats['avg_summary_length']:.0f} chars)")
+
+# COMMAND ----------
+
+display(result_df)
+
+# COMMAND ----------
+
+
