@@ -250,7 +250,3 @@ print(f"  (Average content: {compression_stats['avg_content_length']:.0f} chars 
 # COMMAND ----------
 
 display(result_df)
-
-# COMMAND ----------
-
-

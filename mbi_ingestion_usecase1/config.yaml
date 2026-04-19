@@ -7,7 +7,7 @@ usecase1:
   file_description_path: vol1/source/usecase1_file_description/usecase1-purpose.csv
 
 ingestion:
-  source_volume_path: vol1/source/usecase1
+  source_volume_path: vol1/source/usecase1/input_pdf_files
   entities_table: entities
   bronze_layer:
     metadata_extraction_llm: databricks-claude-opus-4-6
