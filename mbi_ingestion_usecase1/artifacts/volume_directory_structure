@@ -1,5 +1,8 @@
 /Volumes/serverless_stable_14ey07_catalog/mbi/vol1
 ├── eval
+│   ├── Q&A-usecase1.csv
+│   ├── Q&A-usecase2.csv
+│   └── Q&A-usecase3.csv
 ├── parsed_doc_images
 │   ├── usecase1
 │   ├── usecase2
@@ -7,10 +10,17 @@
 └── source
     ├── usecase1
     │   ├── input_pdf_files
+    │   │   ├── AC_150_5000-17-Critical-Aircraft-and-Regular-Use-Determination.pdf
     │   └── supporting_files
+    │       ├── Q&G.json
     ├── usecase2
     │   ├── input_pdf_files
+    │   │   ├── Elec - Myers Illuminator IE Series Central Lighting Inverter Cutsheet.pdf
     │   └── supporting_files
+    │       └── Q&G_uc2.json
     └── usecase3
         ├── input_pdf_files
+        │   ├── CDS-001.pdf
+        │   └── REIN-021.pdf
         └── supporting_files
+            └── Q&G_uc3.json
