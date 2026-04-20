@@ -1,0 +1,16 @@
+/Volumes/serverless_stable_14ey07_catalog/mbi/vol1
+├── eval
+├── parsed_doc_images
+│   ├── usecase1
+│   ├── usecase2
+│   └── usecase3
+└── source
+    ├── usecase1
+    │   ├── input_pdf_files
+    │   └── supporting_files
+    ├── usecase2
+    │   ├── input_pdf_files
+    │   └── supporting_files
+    └── usecase3
+        ├── input_pdf_files
+        └── supporting_files
